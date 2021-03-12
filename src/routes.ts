@@ -10,17 +10,17 @@ const surveysController = new SurveysController();
 const sendMailController = new SendMailController();
 
 // Users routes
-
 // Create users
 router.post('/users', usersController.create);
 
 // Surveys routes
-
 // Create surveys
 router.post('/surveys', surveysController.create);
 // Show surveys
 router.get('/surveys', surveysController.show);
 
+// Mailer routes
+// Send mail
 router.post('/sendMail', sendMailController.execute);
 
 export { router };
