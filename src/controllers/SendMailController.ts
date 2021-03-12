@@ -44,6 +44,8 @@ class SendMailController {
       name: user.name,
       title: survey.title,
       description: survey.description,
+      user_id: user.id,
+      link: `${process.env.URL}/answers`,
     };
 
     await SendMailService.execute(email, survey.title, variables, npsPath);
